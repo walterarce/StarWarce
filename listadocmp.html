@@ -1,15 +1,10 @@
-<section class="container">
-    <div class="col-md-4">
-       Salida: {{$ctrl.valor}}
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minus natus at consequuntur ab nulla laborum dolorum tempora voluptatum, voluptatem similique, in repellat ex, ipsa repudiandae maiores sapiente autem doloremque?</p>
+<section class="container"  ng-controller="starshipsCtrl">
+    <div class="card"  ng-repeat="nave in starships">
+        <div class="card-body">
+            <h5 class="card-title">{{nave.name}}</h5>
+            <p class="card-text"> {{nave.model}} </p>
+            <a href="#" class="btn btn-primary">Ver Peliculas</a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minus natus at consequuntur ab nulla laborum dolorum tempora voluptatum, voluptatem similique, in repellat ex, ipsa repudiandae maiores sapiente autem doloremque?</p>
-    </div>
-    <div class="col-md-4">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minus natus at consequuntur ab nulla laborum dolorum tempora voluptatum, voluptatem similique, in repellat ex, ipsa repudiandae maiores sapiente autem doloremque?</p>
-    </div>
-    <div class="col-md-4">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minus natus at consequuntur ab nulla laborum dolorum tempora voluptatum, voluptatem similique, in repellat ex, ipsa repudiandae maiores sapiente autem doloremque?</p>
-    </div>
+
 </section>
