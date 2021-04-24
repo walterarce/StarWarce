@@ -1,10 +1,19 @@
-<section class="container"  ng-controller="starshipsCtrl">
-    <div class="card"  ng-repeat="nave in starships">
+
+<section class="container"  ng-controller="starshipsCtrl" >
+    <div class="card" style="width: 20rem; " ng-repeat="nave in starships" >
+        <div class="card-header">{{nave.name}}</div>
         <div class="card-body">
-            <h5 class="card-title">{{nave.name}}</h5>
-            <p class="card-text"> {{nave.model}} </p>
-            <a href="#" class="btn btn-primary">Ver Peliculas</a>
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuMAijmY-Q9LS9VgvORscsFfeFP3I3vtXtZg&usqp=CAU" alt="Card image cap">
+            <h5 class="card-title">Nombre:{{nave.name}}</h5>
+            <p class="card-text"> Modelo:{{nave.model}} Fabricante:{{nave.manufacturer}}
+                Pasajeros:{{nave.passengers}} <br>
+                Url: {{nave.url}} <br>
+                Clase Nave: {{nave.starship_class}}
+                <p ng-repeat="pelicula in nave.films">Pelicula : {{pelicula}}</p>
+                <span class="pull-right glyphicon glyphicon-trash" role="button" data-ng-click=""></span>
+            </p>
+            <button type="submit" ng-click="borrar(nave)"><img class="icon" src="/oim/svg/delete.svg" alt="Borrar"> Borrar</button>
+            <button type="submit" ng-click="editar(nave)"><img class="icon" src="/oim/svg/cog.svg" alt="Editar"> Editar</button>
         </div>
     </div>
-
 </section>

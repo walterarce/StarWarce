@@ -14,8 +14,17 @@ angular.module('app',[])
             $scope.statusval = response.status;
             $scope.statustext = response.statusText;
             $scope.headers = response.headers();
+
         }, function error(response) {
         });
+       
+        $scope.borrar = function (nave) {
+            var respuesta = confirm('¿Desea eliminar "'+ nave.name +'"?');
+            if(respuesta) {
+                var idx = $scope.starships.indexOf(nave);
+                $scope.starships.splice(idx,1);
+            }
+          }
   })
 .component('listado',{
     templateUrl: 'listadocmp.html'
@@ -23,5 +32,5 @@ angular.module('app',[])
 .controller('bodyctrl', function() {
     var vm = this;
     vm.message = 'Hi from home';
-    console.log(vm.message);
   });
+  
